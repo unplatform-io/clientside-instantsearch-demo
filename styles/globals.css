@@ -1,0 +1,73 @@
+/* GENERAL */
+* {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+html {
+  overflow-y: scroll;
+  background: #fff;
+}
+main {
+  min-height: 360px;
+}
+.left-column {
+  float: left;
+  width: 23%;
+  margin-top: 18px;
+}
+.right-column {
+  width: 74%;
+  margin-left: 26%;
+}
+
+#hits {
+  margin: 4px 0;
+  padding: 10px 0;
+  border-top: 2px solid #eee;
+}
+.hit {
+  font-size: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+.hit-image {
+  display: inline-block;
+  width: 16%;
+}
+.hit-image img {
+  max-width: 100%;
+  max-height: 180px;
+}
+.hit-content {
+  font-size: 13px;
+  font-weight: 300;
+  display: inline-block;
+  width: 83%;
+  margin-left: 1%;
+  vertical-align: top;
+}
+.hit-content .hit-price {
+  float: right;
+  margin-left: 20px;
+  color: #ed5565;
+}
+.hit-content .hit-price,
+.hit-content .hit-name {
+  font-weight: normal;
+  margin-top: 0;
+  font-size: 20px;
+}
+.hit-content em {
+  font-style: normal;
+  background: #fbdde0;
+}
+.hit-content .hit-description {
+  color: #999;
+}
+
+.ais-Stats-text {
+  color: #697782;
+  font-size: 14px;
+  opacity: 0.6;
+  font-stretch: normal;
+}
+
