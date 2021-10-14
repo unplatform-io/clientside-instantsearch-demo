@@ -1,12 +1,6 @@
 import type { NextPage } from "next";
 import algoliasearch from "algoliasearch/lite";
-import {
-  InstantSearch,
-  SearchBox,
-  Hits,
-  Pagination,
-  Stats,
-} from "react-instantsearch-dom";
+import { InstantSearch, SearchBox } from "react-instantsearch-dom";
 import "instantsearch.css/themes/satellite.css";
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";

@@ -7,7 +7,9 @@ const Content: NextPage = () => {
   return (
     <div className="right-column">
       <div className="info">
+        <br />
         <Stats />
+        <br />
       </div>
       <Hits hitComponent={HitComponent} />
       <div className="pagination">
