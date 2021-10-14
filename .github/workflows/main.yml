@@ -1,0 +1,15 @@
+name: deploy website
+on: [pull_request]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ngduc/vercel-deploy-action@master
+        with:
+          vercel-cli: vercel # optional ("vercel" or "now")
+          vercel-token: srIZFbRny5PKfugZJo3fiFry # Required
+          vercel-args: '--prod' #Optional
+          vercel-org-id: team_vQRNKZYXcoBu85bf9N5ssez8  #Required
+          vercel-project-id: prj_mWy0ORHDf5hQeZiNTD928qiZGatU #Required 
+          working-directory: ./sub-directory
