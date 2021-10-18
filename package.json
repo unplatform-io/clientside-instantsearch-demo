@@ -1,6 +1,6 @@
 {
   "name": "clientside-instantsearch-demo",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -25,5 +25,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "2.4.1",
     "typescript": "4.4.4"
+  },
+  "volta": {
+    "node": "14.18.1"
   }
 }
