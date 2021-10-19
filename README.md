@@ -13,6 +13,12 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 ## Run E2E tests with [Cypress](https://www.cypress.io/)
 
+Before running Cypress
+```bash
+npm run build
+npm start
+```
+
 With the Cypress GUI
 ```bash
 npm run test
