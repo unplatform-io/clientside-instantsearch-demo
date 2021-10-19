@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "cypress open",
+    "test:headless": "cypress run"
   },
   "dependencies": {
     "algoliasearch": "^4.10.5",
@@ -19,6 +21,7 @@
   "devDependencies": {
     "@types/react": "17.0.29",
     "@types/react-instantsearch-dom": "^6.12.0",
+    "cypress": "^8.6.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "11.1.2",
     "eslint-config-prettier": "^8.3.0",
