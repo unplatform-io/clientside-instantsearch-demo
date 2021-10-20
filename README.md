@@ -1,7 +1,7 @@
 # Clientside InstantSearch Demo
 ## Introduction
 
-This Instantsearch based application demonstrates how to perform client-side only search using itemsjs. It uses unplatform-io/clientside-instantsearch-itemsjs-adapter to connect Instantsearch to itemsjs.
+This Instantsearch based application demonstrates how to perform client-side only search using itemsjs. It uses [unplatform-io/clientside-instantsearch-itemsjs-adapter](https://github.com/unplatform-io/instantsearch-itemsjs-adapter) to connect Instantsearch to itemsjs.
 
 ## Getting Started
 
