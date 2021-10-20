@@ -16,9 +16,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-## Run E2E tests with [Cypress](https://www.cypress.io/)
+## [Cypress](https://www.cypress.io/)
 
-Before running Cypress
+Before running the E2E tests
 ```bash
 npm run build
 npm start
@@ -34,7 +34,7 @@ Without the Cypress GUI via CLI
 npm run test:headless
 ```
 
-## [ESlint](https://eslint.org/) with [Prettier](https://prettier.io/)
+## [ESlint](https://eslint.org/)
 
 To run ESlint
 ```bash
