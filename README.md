@@ -1,3 +1,9 @@
+# Clientside InstantSearch Demo
+## Introduction
+
+In this repository, there is a demo of the NPM package ..... The demo was created in Next.js with Typescript. Where InstantSearch library has been used as search UI.
+
+
 ## Getting Started
 
 To start the project run the following commands
