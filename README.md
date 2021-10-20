@@ -1,8 +1,7 @@
 # Clientside InstantSearch Demo
 ## Introduction
 
-In this repository, there is a demo of the NPM package ..... The demo was created in Next.js with Typescript. Where InstantSearch library has been used as search UI.
-
+This Instantsearch based application demonstrates how to perform client-side only search using itemsjs. It uses unplatform-io/clientside-instantsearch-itemsjs-adapter to connect Instantsearch to itemsjs.
 
 ## Getting Started
 
@@ -37,12 +36,7 @@ npm run test:headless
 
 ## [ESlint](https://eslint.org/) with [Prettier](https://prettier.io/)
 
-To run ESlint with Prettier
+To run ESlint
 ```bash
 npm run lint
-```
-
-Fix Eslint & Prettier formatted error
-```bash
-npm run lint -- --fix
 ```
