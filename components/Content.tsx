@@ -3,7 +3,7 @@ import React from "react";
 import { Hits, Stats, Pagination } from "react-instantsearch-dom";
 import HitComponent from "./HitComponent";
 
-const Content: NextPage = () => {
+function Content() {
   return (
     <div className="right-column">
       <div className="info">
@@ -17,6 +17,6 @@ const Content: NextPage = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Content;

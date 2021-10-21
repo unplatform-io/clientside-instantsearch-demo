@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { RefinementList, Menu } from "react-instantsearch-dom";
 
-const Sidebar: NextPage = () => {
+function Sidebar() {
   return (
     <div className="left-column">
       <h5>Category</h5>
@@ -13,6 +13,6 @@ const Sidebar: NextPage = () => {
       <Menu attribute="type" />
     </div>
   );
-};
+}
 
 export default Sidebar;

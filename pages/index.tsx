@@ -1,31 +1,28 @@
 import type { NextPage } from "next";
-import algoliasearch from "algoliasearch/lite";
-import { InstantSearch, SearchBox } from "react-instantsearch-dom";
 import "instantsearch.css/themes/satellite.css";
-import Sidebar from "../components/Sidebar";
-import Content from "../components/Content";
+import SearchGrid from "../components/SearchGrid";
+import { GetStaticProps, InferGetStaticPropsType } from "next";
 
-const searchClient = algoliasearch(
-  process.env.NEXT_PUBLIC_API_NAME!,
-  process.env.NEXT_PUBLIC_API_KEY!
-);
+type Product = {};
 
-const Home: NextPage = () => {
+export async function getStaticProps({}: GetStaticProps) {
+  const res = await fetch("https://fakestoreapi.com/products");
+  const products: Product[] = await res.json();
+  console.log("run");
+  return {
+    props: {
+      products,
+    },
+    revalidate: 10, // In seconds
+  };
+}
+
+function Home({ products }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <InstantSearch
-      searchClient={searchClient}
-      indexName={process.env.NEXT_PUBLIC_API_INDEXNAME!}
-    >
-      <header className="header">
-        <SearchBox translations={{ placeholder: "Search for products" }} />
-      </header>
-
-      <main>
-        <Sidebar />
-        <Content />
-      </main>
-    </InstantSearch>
+    <>
+      <SearchGrid products={products} />
+    </>
   );
-};
+}
 
 export default Home;
