@@ -2,25 +2,59 @@ import type { NextPage } from "next";
 import "instantsearch.css/themes/satellite.css";
 import SearchGrid from "../components/SearchGrid";
 import { GetStaticProps, InferGetStaticPropsType } from "next";
+import {
+  createIndex,
+  search,
+  getSearchClient,
+} from "instantsearch-itemsjs-adapter/lib/adapter";
+import { useEffect, useState } from "react";
 
-type Product = {};
+const test = {
+  query: "Gold",
+};
 
-export async function getStaticProps({}: GetStaticProps) {
-  const res = await fetch("https://fakestoreapi.com/products");
-  const products: Product[] = await res.json();
-  console.log("run");
-  return {
-    props: {
-      products,
+function Home() {
+  type Product = {};
+
+  const [productsState, setProductsState] = useState({});
+  var index = {};
+  var searchClientTry = {};
+
+  useEffect(() => {
+    async function getProducts() {
+      const res = await fetch("https://fakestoreapi.com/products");
+      const products: Product[] = await res.json();
+
+      setProductsState(products);
+    }
+
+    getProducts();
+  }, []);
+
+  if (Object.values(productsState).length > 1) {
+    createIndex(productsState);
+    // const searchClient = getSearchClient(productsState);
+    // console.log(searchClient);
+    //   index = createIndex(productsState);
+    // }
+    // searchClientTry = {
+    //   // search: (queries) => (result),
+    //   search: (requests: any) => createIndex(productsState),
+    //   searchForFacetValues: () => {
+    //     throw new Error("Not implemented");
+    //   },
+    // };
+  }
+
+  searchClientTry = {
+    search: (requests: any) => search(test),
+    searchForFacetValues: () => {
+      throw new Error("Not implemented");
     },
-    revalidate: 10, // In seconds
   };
-}
-
-function Home({ products }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <SearchGrid products={products} />
+      <SearchGrid searchClientTry={searchClientTry} productsState={index} />
     </>
   );
 }
