@@ -1,29 +1,29 @@
 import type { NextPage } from "next";
 import React from "react";
-import { InstantSearch, SearchBox } from "react-instantsearch-dom";
+import { Hits, InstantSearch, SearchBox } from "react-instantsearch-dom";
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
 // import algoliasearch from "algoliasearch/lite";
+import HitComponent from "../components/HitComponent";
 
 interface Props {
-  productsState: object;
-  searchClientTry: object;
+  searchClient: any;
 }
 
-// const searchClient = algoliasearch(
+// const agolia = algoliasearch(
 //   process.env.NEXT_PUBLIC_API_NAME!,
 //   process.env.NEXT_PUBLIC_API_KEY!
 // );
 
-function SearchGrid({ searchClientTry, productsState }: Props) {
+function SearchGrid({ searchClient }: Props) {
   return (
     <>
-      {console.log("serachgrit seachclienttry", searchClientTry)}
-      <InstantSearch searchClient={searchClientTry} indexName={"products"}>
+      <InstantSearch searchClient={searchClient} indexName={"products"}>
         <header className="header">
           <SearchBox translations={{ placeholder: "Search for products" }} />
         </header>
 
+        <Hits hitComponent={HitComponent} />
         <main>
           <Sidebar />
           <Content />
