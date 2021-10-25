@@ -11,6 +11,8 @@
     "test:headless": "cypress run"
   },
   "dependencies": {
+    "@types/react-instantsearch": "^6.10.0",
+    "@types/react-instantsearch-core": "^6.10.5",
     "algoliasearch": "^4.10.5",
     "instantsearch.css": "^7.4.5",
     "next": "11.1.2",

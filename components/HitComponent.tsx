@@ -2,7 +2,7 @@ import React from "react";
 import { Hit } from "react-instantsearch-core";
 
 type Props = {
-  title: string;
+  name: string;
 };
 
 type HitComponentProps = {
@@ -10,10 +10,10 @@ type HitComponentProps = {
 };
 
 function HitComponent({ hit }: HitComponentProps) {
-  console.log(hit);
+  console.log("hit", hit);
   return (
     <div className="hit">
-      <h1>{hit.title}</h1>
+      <h1>{hit.name}</h1>
     </div>
   );
 }
