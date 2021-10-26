@@ -3,7 +3,7 @@ describe('example to-do app', () => {
     cy.visit('http://localhost:3000')
   })
 
-  it('Display category', () => {
-    cy.get('.left-column h5').first().should('have.text', 'Category')
+  it('Display Brand', () => {
+    cy.get('.left-column h5').first().should('have.text', 'Brand')
   })
 })
