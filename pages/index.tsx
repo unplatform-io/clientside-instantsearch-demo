@@ -23,8 +23,44 @@ function Home() {
     createIndex(productsState);
   }
 
+  // interface Hit {
+  //   readonly objectID: string;
+  // }
+
+  // interface SearchResponse<TObject = {}> {
+  //   hits: Array<Hit>;
+  //   page: number;
+  //   nbHits: number;
+  //   nbPages: number;
+  //   hitsPerPage: number;
+  //   processingTimeMS: number;
+  //   exhaustiveNbHits: boolean;
+  //   query: string;
+  //   params: string;
+  // }
+
+  // interface MultipleQueriesResponse<TObject> {
+  //   /**
+  //    * The list of results.
+  //    */
+  //   results: Array<SearchResponse<TObject>>;
+  // }
+
+  // interface SearchClient {
+  //   search: <TObject>(queries: ) => MultipleQueriesResponse<TObject>;
+  //   searchForFacetValues: () => undefined;
+  // }
+
+  // // var searchClient = {};
+  // var searchClient: SearchClient = {
+  //   search: (queries) => search(queries),
+  //   searchForFacetValues: () => {
+  //     throw new Error("Not implemented");
+  //   },
+  // };
+
   searchClient = {
-    search: (queries: MultipleQueriesQuery[]) => search(queries),
+    search: (requests: any) => search(requests),
     searchForFacetValues: () => {
       throw new Error("Not implemented");
     },
@@ -38,25 +74,3 @@ function Home() {
 }
 
 export default Home;
-
-interface MultipleQueriesQuery {
-  type: "facet";
-  facet: string;
-
-  params?: SharedMultipleQueriesQuery["params"];
-}
-
-interface SharedMultipleQueriesQuery {
-  indexName: string;
-  params?: SearchOptions;
-}
-
-interface SearchOptions {
-  query?: string;
-  tagFilters?: string | string[] | ReadonlyArray<string[]>;
-  page?: number;
-  highlightPreTag?: string;
-  highlightPostTag?: string;
-  facets?: string[];
-  maxValuesPerFacet?: number;
-}
