@@ -5,9 +5,8 @@ import { useEffect, useState } from "react";
 
 function Home() {
   type Product = {};
-
-  const [productsState, setProductsState] = useState({});
   var searchClient = {};
+  const [productsState, setProductsState] = useState({});
 
   useEffect(() => {
     async function getProducts() {
@@ -23,6 +22,42 @@ function Home() {
   if (Object.values(productsState).length > 1) {
     createIndex(productsState);
   }
+
+  // interface Hit {
+  //   readonly objectID: string;
+  // }
+
+  // interface SearchResponse<TObject = {}> {
+  //   hits: Array<Hit>;
+  //   page: number;
+  //   nbHits: number;
+  //   nbPages: number;
+  //   hitsPerPage: number;
+  //   processingTimeMS: number;
+  //   exhaustiveNbHits: boolean;
+  //   query: string;
+  //   params: string;
+  // }
+
+  // interface MultipleQueriesResponse<TObject> {
+  //   /**
+  //    * The list of results.
+  //    */
+  //   results: Array<SearchResponse<TObject>>;
+  // }
+
+  // interface SearchClient {
+  //   search: <TObject>(queries: ) => MultipleQueriesResponse<TObject>;
+  //   searchForFacetValues: () => undefined;
+  // }
+
+  // // var searchClient = {};
+  // var searchClient: SearchClient = {
+  //   search: (queries) => search(queries),
+  //   searchForFacetValues: () => {
+  //     throw new Error("Not implemented");
+  //   },
+  // };
 
   searchClient = {
     search: (requests: any) => search(requests),

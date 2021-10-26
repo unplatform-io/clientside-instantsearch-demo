@@ -1,41 +1,41 @@
-name: main
+# name: main
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+# on:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 
-jobs:
-  eslint:
-    runs-on: ubuntu-latest
+# jobs:
+#   eslint:
+#     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x]
+#     strategy:
+#       matrix:
+#         node-version: [14.x]
 
-    steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - run: npm run lint
-    - run: npm run build
-    
-  cypress-run:
-    runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v1
+#     - name: Use Node.js ${{ matrix.node-version }}
+#       uses: actions/setup-node@v1
+#       with:
+#         node-version: ${{ matrix.node-version }}
+#     - run: npm install
+#     - run: npm run lint
+#     - run: npm run build
 
-    strategy:
-      matrix:
-        node-version: [14.x]
+#   cypress-run:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          build: npm run build
-          start: npm start
+#     strategy:
+#       matrix:
+#         node-version: [14.x]
+
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
+#       - name: Cypress run
+#         uses: cypress-io/github-action@v2
+#         with:
+#           build: npm run build
+#           start: npm start

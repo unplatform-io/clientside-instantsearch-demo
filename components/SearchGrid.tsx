@@ -14,13 +14,10 @@ const agolia = algoliasearch(
 function SearchGrid({ searchClient }: any) {
   return (
     <>
-      <InstantSearch searchClient={searchClient} indexName={"products"}>
-        {console.log("searchgrid")}
+      <InstantSearch searchClient={searchClient} indexName={"instant_search"}>
         <header className="header">
           <SearchBox translations={{ placeholder: "Search for products" }} />
         </header>
-
-        <Hits hitComponent={HitComponent} />
         <main>
           <Sidebar />
           <Content />
