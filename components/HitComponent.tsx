@@ -2,20 +2,19 @@ import React from "react";
 import { Hit } from "react-instantsearch-core";
 import Image from "next/image";
 
-type Props = {
+interface Props {
   name: string;
   image: string;
   price: number;
   title: string;
   description: string;
-};
+}
 
-type HitComponentProps = {
+interface HitComponentProps {
   hit: Hit<Props>;
-};
+}
 
 function HitComponent({ hit }: HitComponentProps) {
-  console.log("hit", hit);
   return (
     <div className="hit">
       <div className="hit-image">

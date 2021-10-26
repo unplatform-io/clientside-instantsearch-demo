@@ -4,7 +4,7 @@ function Sidebar() {
   return (
     <div className="left-column">
       <h5>Brand</h5>
-      <RefinementList searchable={true} attribute="category" />
+      <RefinementList attribute="brand" />
     </div>
   );
 }

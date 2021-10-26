@@ -4,7 +4,6 @@ import { Hits, InstantSearch, SearchBox } from "react-instantsearch-dom";
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
 import algoliasearch from "algoliasearch/lite";
-import HitComponent from "../components/HitComponent";
 
 const agolia = algoliasearch(
   process.env.NEXT_PUBLIC_API_NAME!,
