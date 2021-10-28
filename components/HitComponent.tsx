@@ -44,4 +44,3 @@ function HitComponent({ hit }: HitComponentProps) {
 }
 
 export default HitComponent;
-
