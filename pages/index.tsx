@@ -1,31 +1,20 @@
-import type { NextPage } from "next";
-import algoliasearch from "algoliasearch/lite";
-import { InstantSearch, SearchBox } from "react-instantsearch-dom";
 import "instantsearch.css/themes/satellite.css";
-import Sidebar from "../components/Sidebar";
-import Content from "../components/Content";
+import SearchGrid from "../components/SearchGrid";
+import getSearchClient from "instantsearch-itemsjs-adapter/lib/adapter";
+import data from "../public/products.json";
 
-const searchClient = algoliasearch(
-  process.env.NEXT_PUBLIC_API_NAME!,
-  process.env.NEXT_PUBLIC_API_KEY!
-);
-
-const Home: NextPage = () => {
-  return (
-    <InstantSearch
-      searchClient={searchClient}
-      indexName={process.env.NEXT_PUBLIC_API_INDEXNAME!}
-    >
-      <header className="header">
-        <SearchBox translations={{ placeholder: "Search for products" }} />
-      </header>
-
-      <main>
-        <Sidebar />
-        <Content />
-      </main>
-    </InstantSearch>
-  );
+const options = {
+  searchableFields: ["title"],
 };
+
+const searchClient = getSearchClient(data, options);
+
+function Home() {
+  return (
+    <>
+      <SearchGrid searchClient={searchClient} />
+    </>
+  );
+}
 
 export default Home;
