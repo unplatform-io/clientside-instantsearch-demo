@@ -15,7 +15,6 @@ type HitComponentProps = {
 };
 
 function HitComponent({ hit }: HitComponentProps) {
-  console.log("hit", hit);
   return (
     <>
       <div className="hit">
