@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import React from "react";
-import { Hits, InstantSearch, SearchBox } from "react-instantsearch-dom";
+import { InstantSearch, SearchBox } from "react-instantsearch-dom";
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
 import algoliasearch from "algoliasearch/lite";

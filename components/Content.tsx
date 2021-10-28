@@ -1,4 +1,3 @@
-import type { NextPage } from "next";
 import React from "react";
 import { Hits, Stats, Pagination } from "react-instantsearch-dom";
 import HitComponent from "./HitComponent";

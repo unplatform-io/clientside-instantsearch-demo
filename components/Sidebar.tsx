@@ -1,6 +1,7 @@
+import { NextPage } from "next";
 import { RefinementList } from "react-instantsearch-dom";
 
-function Sidebar() {
+export default function Sidebar() {
   return (
     <div className="left-column">
       <h5>Brand</h5>
@@ -8,5 +9,3 @@ function Sidebar() {
     </div>
   );
 }
-
-export default Sidebar;
