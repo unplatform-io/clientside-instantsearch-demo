@@ -1,6 +1,9 @@
 import "instantsearch.css/themes/satellite.css";
 import SearchGrid from "../components/SearchGrid";
-import getSearchClient from "instantsearch-itemsjs-adapter/lib/adapter";
+import {
+  getSearchClient,
+  createIndex,
+} from "instantsearch-itemsjs-adapter/lib/adapter";
 import data from "../public/products.json";
 
 const options = {
@@ -8,7 +11,8 @@ const options = {
   query: "",
 };
 
-const searchClient = getSearchClient(data, options);
+createIndex(data, options);
+const searchClient = getSearchClient();
 
 function Home() {
   return (
