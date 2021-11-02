@@ -5,6 +5,7 @@ import data from "../public/products.json";
 
 const options = {
   searchableFields: ["title"],
+  query: "",
 };
 
 const searchClient = getSearchClient(data, options);
