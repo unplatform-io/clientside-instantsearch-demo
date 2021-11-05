@@ -9,6 +9,13 @@ import data from "../public/products.json";
 const options = {
   searchableFields: ["title"],
   query: "",
+  aggregations: {
+    category: {
+      title: "category",
+      size: 10,
+      conjunction: false,
+    },
+  },
 };
 
 createIndex(data, options);
