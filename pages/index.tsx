@@ -15,6 +15,11 @@ const options = {
       size: 10,
       conjunction: false,
     },
+    color: {
+      title: "color",
+      size: 10,
+      conjunction: false,
+    },
   },
 };
 
