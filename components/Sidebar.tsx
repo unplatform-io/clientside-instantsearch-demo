@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import {
   RangeInput,
   RatingMenu,
@@ -12,8 +11,10 @@ export default function Sidebar() {
       <RefinementList attribute="brand" />
       <h5>Price</h5>
       <RangeInput attribute="price" />
-      <h5>id</h5>
+      <h5>Id</h5>
       <RangeInput attribute="id" />
+      <h5>Rate</h5>
+      <RatingMenu attribute="rate" />
     </div>
   );
 }
