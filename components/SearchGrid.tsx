@@ -35,7 +35,10 @@ const SearchErrorCatcher = connectStateResults(
 function SearchGrid({ searchClient }: any) {
   return (
     <>
-      <InstantSearch searchClient={searchClient} indexName={"demo_products"}>
+      <InstantSearch
+        searchClient={searchClient}
+        indexName={process.env.NEXT_PUBLIC_API_INDEXNAME2!}
+      >
         <SearchErrorCatcher />
         <header className="header">
           <SearchBox translations={{ placeholder: "Search for products" }} />
