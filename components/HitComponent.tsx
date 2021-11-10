@@ -3,11 +3,13 @@ import { Hit } from "react-instantsearch-core";
 import Image from "next/image";
 
 type Props = {
+  id: number;
   name: string;
   image: string;
   price: number;
   title: string;
   description: string;
+  rate: number;
 };
 
 type HitComponentProps = {
@@ -35,7 +37,15 @@ function HitComponent({ hit }: HitComponentProps) {
             <b>{hit.title}</b>
           </div>
           <div className="hit-description">
-            <p>{hit.description}</p>
+            <p>
+              {hit.description}
+              <br />
+              <br />
+              Rating: {hit.rate}
+              <br />
+              <br />
+              id: {hit.id}
+            </p>
           </div>
         </div>
       </div>

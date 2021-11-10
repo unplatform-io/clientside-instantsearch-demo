@@ -1,11 +1,12 @@
-import { NextPage } from "next";
-import { RefinementList } from "react-instantsearch-dom";
+import { RangeInput } from "react-instantsearch-dom";
 
 export default function Sidebar() {
   return (
     <div className="left-column">
-      <h5>Brand</h5>
-      <RefinementList searchable={true} attribute="category" />
+      <h5>Price</h5>
+      <RangeInput attribute="price" />
+      <h5>Id</h5>
+      <RangeInput attribute="id" />
     </div>
   );
 }
