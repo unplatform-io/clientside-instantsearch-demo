@@ -8,7 +8,7 @@ import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
 import algoliasearch from "algoliasearch/lite";
 
-const agolia = algoliasearch(
+const algolia = algoliasearch(
   process.env.NEXT_PUBLIC_API_NAME2!,
   process.env.NEXT_PUBLIC_API_KEY2!
 );
@@ -35,10 +35,7 @@ const SearchErrorCatcher = connectStateResults(
 function SearchGrid({ searchClient }: any) {
   return (
     <>
-      <InstantSearch
-        searchClient={searchClient}
-        indexName={process.env.NEXT_PUBLIC_API_INDEXNAME2!}
-      >
+      <InstantSearch searchClient={searchClient} indexName={"instant_search"}>
         <SearchErrorCatcher />
         <header className="header">
           <SearchBox translations={{ placeholder: "Search for products" }} />
