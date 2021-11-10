@@ -24,6 +24,7 @@ const options = {
 };
 
 createIndex(data, options);
+
 const searchClient = getSearchClient();
 
 function Home() {

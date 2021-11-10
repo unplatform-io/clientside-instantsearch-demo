@@ -1,24 +1,23 @@
-import type { NextPage } from "next";
 import React, { Component } from "react";
 import {
-  connectStateResults,
   InstantSearch,
   SearchBox,
+  connectStateResults,
 } from "react-instantsearch-dom";
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
 import algoliasearch from "algoliasearch/lite";
-import HitComponent from "../components/HitComponent";
 
 const algolia = algoliasearch(
-  process.env.NEXT_PUBLIC_API_NAME!,
-  process.env.NEXT_PUBLIC_API_KEY!
+  process.env.NEXT_PUBLIC_API_NAME2!,
+  process.env.NEXT_PUBLIC_API_KEY2!
 );
 
 const SearchErrorCatcher = connectStateResults(
   class SearchErrorCatcher extends Component {
     error = null;
-    componentWillReceiveProps(nextProps: any) {
+
+    componentDidUpdate(nextProps: any) {
       if (this.error && !nextProps.error) {
         this.error = null;
       }

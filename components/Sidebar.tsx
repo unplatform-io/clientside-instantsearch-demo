@@ -3,6 +3,7 @@ import {
   CurrentRefinements,
   MenuSelect,
   RefinementList,
+  RangeInput,
 } from "react-instantsearch-dom";
 
 export default function Sidebar() {
@@ -17,6 +18,10 @@ export default function Sidebar() {
         <RefinementList attribute="category"></RefinementList>
         <h5>Color</h5>
         <MenuSelect attribute="color"></MenuSelect>
+        <h5>Price</h5>
+        <RangeInput attribute="price" />
+        <h5>Id</h5>
+        <RangeInput attribute="id" />
       </div>
     </div>
   );
