@@ -13,7 +13,7 @@ export default function Sidebar() {
       <div>
         <CurrentRefinements />
         <SortBy
-          defaultRefinement="rating.rate_desc"
+          defaultRefinement=""
           items={[
             { value: "price_desc", label: "Price, high to low" },
             { value: "price_asc", label: "Price, low to high" },
