@@ -20,6 +20,7 @@ const options = {
       size: 10,
       conjunction: false,
     },
+    price: {},
   },
 };
 
