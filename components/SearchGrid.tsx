@@ -3,6 +3,8 @@ import {
   InstantSearch,
   SearchBox,
   connectStateResults,
+  VoiceSearch,
+  ScrollTo,
 } from "react-instantsearch-dom";
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
@@ -38,7 +40,10 @@ function SearchGrid({ searchClient }: any) {
       <InstantSearch searchClient={searchClient} indexName={"instant_search"}>
         <SearchErrorCatcher />
         <header className="header">
-          <SearchBox translations={{ placeholder: "Search for products" }} />
+          <ScrollTo>
+            <SearchBox translations={{ placeholder: "Search for products" }} />
+          </ScrollTo>
+          <VoiceSearch />
         </header>
         <main>
           <Sidebar />

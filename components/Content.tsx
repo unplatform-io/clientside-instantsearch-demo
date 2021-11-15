@@ -1,5 +1,5 @@
 import React from "react";
-import { Hits, Stats, Pagination } from "react-instantsearch-dom";
+import { InfiniteHits, Stats, Pagination } from "react-instantsearch-dom";
 import HitComponent from "./HitComponent";
 
 function Content() {
@@ -10,7 +10,9 @@ function Content() {
         <Stats />
         <br />
       </div>
-      <Hits hitComponent={HitComponent} />
+
+      <InfiniteHits hitComponent={HitComponent} />
+
       <div className="pagination">
         <Pagination showLast />
       </div>
