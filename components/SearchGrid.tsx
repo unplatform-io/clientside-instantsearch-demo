@@ -35,7 +35,7 @@ const SearchErrorCatcher = connectStateResults(
 function SearchGrid({ searchClient }: any) {
   return (
     <>
-      <InstantSearch searchClient={searchClient} indexName={"instant_search"}>
+      <InstantSearch searchClient={searchClient} indexName="instant_search">
         <SearchErrorCatcher />
         <header className="header">
           <SearchBox translations={{ placeholder: "Search for products" }} />

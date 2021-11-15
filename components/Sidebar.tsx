@@ -5,6 +5,7 @@ import {
   RefinementList,
   RangeInput,
   HitsPerPage,
+  SortBy,
 } from "react-instantsearch-dom";
 
 export default function Sidebar() {
@@ -20,6 +21,14 @@ export default function Sidebar() {
             { value: 20, label: "Show 20 hits" },
           ]}
           defaultRefinement={10}
+        <SortBy
+          defaultRefinement=""
+          items={[
+            { value: "price_desc", label: "Price, high to low" },
+            { value: "price_asc", label: "Price, low to high" },
+            { value: "rating.rate_desc", label: "Rating, high to low" },
+            { value: "rating.rate_asc", label: "Rating, low to high" },
+          ]}
         />
       </div>
       <div>

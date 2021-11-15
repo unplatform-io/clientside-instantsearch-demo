@@ -1,5 +1,5 @@
 import React from "react";
-import { Hits, Stats, Pagination } from "react-instantsearch-dom";
+import { Hits, Stats, Pagination, SortBy } from "react-instantsearch-dom";
 import HitComponent from "./HitComponent";
 
 function Content() {
