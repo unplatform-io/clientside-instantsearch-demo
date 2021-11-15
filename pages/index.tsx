@@ -20,7 +20,7 @@ const options = {
       size: 10,
       conjunction: false,
     },
-    price: {},
+    price: {}, //required to get correct response from adapter
   },
 };
 
