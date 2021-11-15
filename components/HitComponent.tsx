@@ -9,6 +9,8 @@ type Props = {
   price: number;
   title: string;
   description: string;
+  category: string;
+  color: string;
   rating: {
     rate: number;
   };
@@ -43,10 +45,13 @@ function HitComponent({ hit }: HitComponentProps) {
               {hit.description}
               <br />
               <br />
-              Rating: {hit.rating.rate}
+              <a>Id: {hit.id}</a>
               <br />
+              <a>Rating: {hit.rating.rate}</a>
               <br />
-              id: {hit.id}
+              <a>Category: {hit.category}</a>
+              <br />
+              <a>Color: {hit.color}</a>
             </p>
           </div>
         </div>

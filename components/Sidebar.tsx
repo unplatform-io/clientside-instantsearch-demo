@@ -4,6 +4,7 @@ import {
   MenuSelect,
   RefinementList,
   RangeInput,
+  HitsPerPage,
   SortBy,
 } from "react-instantsearch-dom";
 
@@ -12,6 +13,14 @@ export default function Sidebar() {
     <div className="left-column">
       <div>
         <CurrentRefinements />
+        <HitsPerPage
+          items={[
+            { value: 5, label: "Show 5 hits" },
+            { value: 10, label: "Show 10 hits" },
+            { value: 15, label: "Show 15 hits" },
+            { value: 20, label: "Show 20 hits" },
+          ]}
+          defaultRefinement={10}
         <SortBy
           defaultRefinement=""
           items={[

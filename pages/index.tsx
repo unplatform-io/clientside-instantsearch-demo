@@ -20,6 +20,7 @@ const options = {
       size: 10,
       conjunction: false,
     },
+    price: {}, //required to get correct response from adapter
   },
   sortings: {
     price_asc: {
