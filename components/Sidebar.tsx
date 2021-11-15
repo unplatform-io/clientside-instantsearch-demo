@@ -4,14 +4,23 @@ import {
   MenuSelect,
   RefinementList,
   RangeInput,
+  SortBy,
 } from "react-instantsearch-dom";
 
 export default function Sidebar() {
   return (
     <div className="left-column">
       <div>
-        <h5>Selected</h5>
         <CurrentRefinements />
+        <SortBy
+          defaultRefinement=""
+          items={[
+            { value: "price_desc", label: "Price, high to low" },
+            { value: "price_asc", label: "Price, low to high" },
+            { value: "rating.rate_desc", label: "Rating, high to low" },
+            { value: "rating.rate_asc", label: "Rating, low to high" },
+          ]}
+        />
       </div>
       <div>
         <h5>Category</h5>

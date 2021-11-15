@@ -9,7 +9,9 @@ type Props = {
   price: number;
   title: string;
   description: string;
-  rate: number;
+  rating: {
+    rate: number;
+  };
 };
 
 type HitComponentProps = {
@@ -41,7 +43,7 @@ function HitComponent({ hit }: HitComponentProps) {
               {hit.description}
               <br />
               <br />
-              Rating: {hit.rate}
+              Rating: {hit.rating.rate}
               <br />
               <br />
               id: {hit.id}

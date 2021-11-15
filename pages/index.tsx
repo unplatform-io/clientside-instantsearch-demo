@@ -21,6 +21,24 @@ const options = {
       conjunction: false,
     },
   },
+  sortings: {
+    price_asc: {
+      field: "price",
+      order: "asc",
+    },
+    price_desc: {
+      field: "price",
+      order: "desc",
+    },
+    "rating.rate_asc": {
+      field: "rating.rate",
+      order: "asc",
+    },
+    "rating.rate_desc": {
+      field: "rating.rate",
+      order: "desc",
+    },
+  },
 };
 
 createIndex(data, options);
