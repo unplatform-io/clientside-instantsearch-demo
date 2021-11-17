@@ -7,6 +7,7 @@ import {
   HitsPerPage,
   ClearRefinements,
   ToggleRefinement,
+  RatingMenu,
 } from "react-instantsearch-dom";
 
 export default function Sidebar() {

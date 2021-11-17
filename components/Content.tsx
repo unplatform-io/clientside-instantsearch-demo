@@ -1,5 +1,7 @@
 import React from "react";
 import { Hits, Stats, Pagination } from "react-instantsearch-dom";
+import { connectStateResults } from "react-instantsearch-core";
+import { CustomStateResults } from "./connectStateResults";
 import HitComponent from "./HitComponent";
 
 function Content() {
@@ -11,7 +13,7 @@ function Content() {
         <br />
       </div>
       <Hits hitComponent={HitComponent} />
-
+      <CustomStateResults />
       <div className="pagination">
         <Pagination showLast />
       </div>
