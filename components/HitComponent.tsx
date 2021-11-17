@@ -11,9 +11,7 @@ type Props = {
   description: string;
   category: string;
   color: string;
-  rating: {
-    rate: number;
-  };
+  rate: number;
 };
 
 type HitComponentProps = {
@@ -47,7 +45,7 @@ function HitComponent({ hit }: HitComponentProps) {
               <br />
               <a>Id: {hit.id}</a>
               <br />
-              <a>Rating: {hit.rating.rate}</a>
+              <a>Rating: {hit.rate}</a>
               <br />
               <a>Category: {hit.category}</a>
               <br />

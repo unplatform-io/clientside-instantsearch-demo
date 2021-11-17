@@ -20,6 +20,9 @@ const options = {
       size: 10,
       conjunction: false,
     },
+    rate: {
+      title: "rate",
+    },
     price: {}, //required to get correct response from adapter
   },
   sortings: {
@@ -31,12 +34,12 @@ const options = {
       field: "price",
       order: "desc",
     },
-    "rating.rate_asc": {
-      field: "rating.rate",
+    "rate_asc": {
+      field: "rate",
       order: "asc",
     },
-    "rating.rate_desc": {
-      field: "rating.rate",
+    "rate_desc": {
+      field: "rate",
       order: "desc",
     },
   },

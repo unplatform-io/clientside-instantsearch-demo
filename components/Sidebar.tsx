@@ -6,6 +6,7 @@ import {
   RangeInput,
   HitsPerPage,
   SortBy,
+  RatingMenu,
 } from "react-instantsearch-dom";
 
 export default function Sidebar() {
@@ -21,13 +22,14 @@ export default function Sidebar() {
             { value: 20, label: "Show 20 hits" },
           ]}
           defaultRefinement={10}
+        />
         <SortBy
-          defaultRefinement=""
+          defaultRefinement="rate_desc"
           items={[
             { value: "price_desc", label: "Price, high to low" },
             { value: "price_asc", label: "Price, low to high" },
-            { value: "rating.rate_desc", label: "Rating, high to low" },
-            { value: "rating.rate_asc", label: "Rating, low to high" },
+            { value: "rate_desc", label: "Rating, high to low" },
+            { value: "rate_asc", label: "Rating, low to high" },
           ]}
         />
       </div>
@@ -37,9 +39,8 @@ export default function Sidebar() {
         <h5>Color</h5>
         <MenuSelect attribute="color"></MenuSelect>
         <h5>Price</h5>
-        <RangeInput attribute="price" />
-        <h5>Id</h5>
-        <RangeInput attribute="id" />
+        <RangeInput min={1} max={1000} attribute="price" />
+        <RatingMenu min={1} max={5} attribute="rate" />
       </div>
     </div>
   );

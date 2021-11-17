@@ -17,29 +17,10 @@ describe("Range input search", () => {
         cy.get(".ais-Stats-text").contains(6);
     });
 
-    it("Range input price && id", () => {
-        cy.get(".ais-RangeInput-input--min").eq(0).type(10);
-        cy.get(".ais-RangeInput-input--max").eq(0).type(50);
-        cy.get(".ais-RangeInput-submit").eq(0).click();
-
-
-        cy.get(".ais-RangeInput-input--min").eq(1).type(5);
-        cy.get(".ais-RangeInput-input--max").eq(1).type(10);
-        cy.get(".ais-RangeInput-submit").eq(1).click();
-
-        cy.get(".hit-name").eq(0).contains("Pierced Owl Rose Gold Plated Stainless Steel Double");
-        cy.get(".ais-Stats-text").contains(1);
-    });
-
     it("Range input search && price && id ", () => {
         cy.get(".ais-RangeInput-input--min").eq(0).type(25);
         cy.get(".ais-RangeInput-input--max").eq(0).type(500);
         cy.get(".ais-RangeInput-submit").eq(0).click();
-
-
-        cy.get(".ais-RangeInput-input--min").eq(1).type(5);
-        cy.get(".ais-RangeInput-input--max").eq(1).type(10);
-        cy.get(".ais-RangeInput-submit").eq(1).click();
 
         cy.get(".ais-SearchBox-input").type('gold');
         cy.get(".hit-name").eq(0).contains("Solid Gold Petite Micropave");
