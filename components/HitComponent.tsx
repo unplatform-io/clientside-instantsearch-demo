@@ -1,6 +1,10 @@
 import React from "react";
-import { Hit } from "react-instantsearch-core";
+import {
+  ExperimentalConfigureRelatedItems,
+  Hit,
+} from "react-instantsearch-core";
 import Image from "next/image";
+import { Snippet } from "react-instantsearch-dom";
 
 type Props = {
   id: number;
@@ -9,7 +13,8 @@ type Props = {
   price: number;
   title: string;
   description: string;
-  rate: number;
+  category: string;
+  color: string;
 };
 
 type HitComponentProps = {
@@ -41,10 +46,13 @@ function HitComponent({ hit }: HitComponentProps) {
               {hit.description}
               <br />
               <br />
-              Rating: {hit.rate}
+              Id: {hit.id}
               <br />
+              Category: {hit.category}
               <br />
-              id: {hit.id}
+              Color: {hit.color}
+              <br />
+              {/* <Snippet attribute="description" hit={hit} separator=" - " /> */}
             </p>
           </div>
         </div>

@@ -5,6 +5,8 @@ import {
   connectStateResults,
   VoiceSearch,
   ScrollTo,
+  Configure,
+  PoweredBy,
 } from "react-instantsearch-dom";
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
@@ -39,13 +41,23 @@ function SearchGrid({ searchClient }: any) {
     <>
       <InstantSearch searchClient={searchClient} indexName={"instant_search"}>
         <SearchErrorCatcher />
+
         <header className="header">
-          <ScrollTo>
-            <SearchBox translations={{ placeholder: "Search for products" }} />
-          </ScrollTo>
-          <VoiceSearch />
+          <div>
+            <PoweredBy />
+            <br />
+          </div>
+          <div>
+            <ScrollTo>
+              <SearchBox
+                translations={{ placeholder: "Search for products" }}
+              />
+            </ScrollTo>
+            <VoiceSearch />
+          </div>
         </header>
         <main>
+          {/* <Configure facetFilters={[["inStock:true"]]} /> */}
           <Sidebar />
           <Content />
         </main>

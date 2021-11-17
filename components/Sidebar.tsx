@@ -13,9 +13,9 @@ export default function Sidebar() {
   return (
     <div className="left-column">
       <div>
-        <h5>Selected</h5>
         <CurrentRefinements />
         <ClearRefinements />
+        <br />
         <HitsPerPage
           items={[
             { value: 5, label: "Show 5 hits" },
@@ -29,16 +29,19 @@ export default function Sidebar() {
       <div>
         <h5>Category</h5>
         <RefinementList attribute="category"></RefinementList>
+        <br />
         <h5>Color</h5>
         <MenuSelect attribute="color"></MenuSelect>
+        <br />
         <h5>Price</h5>
         <RangeInput attribute="price" />
+        <br />
         <h5>Id</h5>
         <RangeInput attribute="id" />
         <br />
         <ToggleRefinement
           attribute={"inStock"}
-          label={<b>In Stock</b>}
+          label={"In Stock"}
           value={true}
         />
       </div>
