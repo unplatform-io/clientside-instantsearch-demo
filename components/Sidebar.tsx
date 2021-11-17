@@ -7,8 +7,10 @@ import {
   HitsPerPage,
   ClearRefinements,
   ToggleRefinement,
-  RatingMenu,
+  NumericMenu,
 } from "react-instantsearch-dom";
+
+import { CustomRangeSlider } from "./connectRangeSlider";
 
 export default function Sidebar() {
   return (
@@ -34,17 +36,31 @@ export default function Sidebar() {
         <h5>Color</h5>
         <MenuSelect attribute="color"></MenuSelect>
         <br />
-        <h5>Price</h5>
-        <RangeInput attribute="price" />
+        {/* <h5>Price</h5>
+        <RangeInput attribute="price" /> */}
         <br />
         <h5>Id</h5>
         <RangeInput attribute="id" />
         <br />
+        <h5>ToggleRefinement</h5>
         <ToggleRefinement
           attribute={"inStock"}
           label={"In Stock"}
           value={true}
         />
+        <br />
+        <h5>NumericMenu</h5>
+        <NumericMenu
+          attribute="price"
+          items={[
+            { label: "Kleiner dan €10", end: 10 },
+            { label: "Tussen €10 en €100", start: 10, end: 100 },
+            { label: "Tussen €100 en €500", start: 100, end: 500 },
+            { label: "Grote dan €500", start: 500 },
+          ]}
+        />
+
+        <CustomRangeSlider attribute="price" />
       </div>
     </div>
   );

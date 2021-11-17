@@ -1,8 +1,19 @@
 import React from "react";
-import { Hits, Stats, Pagination } from "react-instantsearch-dom";
-import { connectStateResults } from "react-instantsearch-core";
+import {
+  Hits,
+  Stats,
+  Pagination,
+  ExperimentalConfigureRelatedItems,
+} from "react-instantsearch-dom";
+
 import { CustomStateResults } from "./connectStateResults";
 import HitComponent from "./HitComponent";
+
+// const hit = {
+//   objectID: "1234",
+//   title: "Fjallraven",
+//   category: "men's clothing",
+// };
 
 function Content() {
   return (
@@ -12,8 +23,11 @@ function Content() {
         <Stats />
         <br />
       </div>
+
       <Hits hitComponent={HitComponent} />
+
       <CustomStateResults />
+
       <div className="pagination">
         <Pagination showLast />
       </div>

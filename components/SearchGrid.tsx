@@ -5,7 +5,7 @@ import {
   connectStateResults,
   VoiceSearch,
   ScrollTo,
-  Configure,
+  QueryRuleCustomData,
   PoweredBy,
 } from "react-instantsearch-dom";
 import Sidebar from "../components/Sidebar";
@@ -41,7 +41,6 @@ function SearchGrid({ searchClient }: any) {
     <>
       <InstantSearch searchClient={searchClient} indexName={"instant_search"}>
         <SearchErrorCatcher />
-
         <header className="header">
           <div>
             <PoweredBy />
