@@ -8,6 +8,7 @@ import {
   ClearRefinements,
   ToggleRefinement,
   NumericMenu,
+  RatingMenu,
 } from "react-instantsearch-dom";
 
 import { CustomRangeSlider } from "./connectRangeSlider";
@@ -30,37 +31,40 @@ export default function Sidebar() {
         />
       </div>
       <div>
-        <h5>Category</h5>
+        <br />
+        <br />
+        <h4>Category</h4>
         <RefinementList attribute="category"></RefinementList>
         <br />
-        <h5>Color</h5>
+        <h4>Color</h4>
         <MenuSelect attribute="color"></MenuSelect>
         <br />
-        {/* <h5>Price</h5>
-        <RangeInput attribute="price" /> */}
+        <h4>Price</h4>
+        <CustomRangeSlider attribute="price" />
         <br />
-        <h5>Id</h5>
-        <RangeInput attribute="id" />
         <br />
-        <h5>ToggleRefinement</h5>
+        <h4>deliveryTime</h4>
+        <RangeInput attribute="deliveryTime" />
+        <br />
         <ToggleRefinement
           attribute={"inStock"}
-          label={"In Stock"}
+          label={<h4>In Stock</h4>}
           value={true}
         />
         <br />
-        <h5>NumericMenu</h5>
+        <h4>Rating</h4>
+        <RatingMenu attribute={"rating"} />
+        <br />
+        <h4>Amount of Reviews</h4>
         <NumericMenu
-          attribute="price"
+          attribute="reviews"
           items={[
-            { label: "Kleiner dan €10", end: 10 },
-            { label: "Tussen €10 en €100", start: 10, end: 100 },
-            { label: "Tussen €100 en €500", start: 100, end: 500 },
-            { label: "Grote dan €500", start: 500 },
+            { label: "less than 10", end: 10 },
+            { label: "10 till 25", start: 10, end: 25 },
+            { label: "25 till 50", start: 25, end: 50 },
+            { label: "More than 50", start: 50 },
           ]}
         />
-
-        <CustomRangeSlider attribute="price" />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import { Hit } from "react-instantsearch-core";
 import Image from "next/image";
+import { Snippet } from "react-instantsearch-dom";
 
 type Props = {
   id: number;
@@ -11,7 +12,9 @@ type Props = {
   description: string;
   category: string;
   color: string;
-  rate: number;
+  rating: number;
+  deliveryTime: number;
+  inStock: boolean;
 };
 
 type HitComponentProps = {
@@ -40,16 +43,21 @@ function HitComponent({ hit }: HitComponentProps) {
           </div>
           <div className="hit-description">
             <p>
-              {hit.description}
+              <Snippet attribute="snippets" hit={hit} separator=" - " />
               <br />
               <br />
-              <a>Id: {hit.id}</a>
+              <a>{hit.description}</a>
               <br />
-              <a>Rating: {hit.rate}</a>
               <br />
               <a>Category: {hit.category}</a>
               <br />
               <a>Color: {hit.color}</a>
+              <br />
+              {hit.inStock ? <a>In Stock: Yes</a> : <a>In Stock: No</a>}
+              <br />
+              <a>Rating: {hit.rating}</a>
+              <br />
+              <a>deliveryTime: {hit.deliveryTime} days</a>
             </p>
           </div>
         </div>

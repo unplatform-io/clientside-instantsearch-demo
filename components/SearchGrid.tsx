@@ -7,6 +7,7 @@ import {
   ScrollTo,
   QueryRuleCustomData,
   PoweredBy,
+  Index,
 } from "react-instantsearch-dom";
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
@@ -56,7 +57,7 @@ function SearchGrid({ searchClient }: any) {
           </div>
         </header>
         <main>
-          {/* <Configure facetFilters={[["inStock:true"]]} /> */}
+          {/* <Configure facetFilters={["category:electronics"]} /> */}
           <Sidebar />
           <Content />
         </main>

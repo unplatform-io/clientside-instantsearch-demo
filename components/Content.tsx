@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Hits,
-  Stats,
-  Pagination,
-  ExperimentalConfigureRelatedItems,
-} from "react-instantsearch-dom";
+import { Hits, Stats, Pagination } from "react-instantsearch-dom";
 
 import { CustomStateResults } from "./connectStateResults";
 import HitComponent from "./HitComponent";

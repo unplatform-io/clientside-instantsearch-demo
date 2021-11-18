@@ -22,6 +22,9 @@ const options = {
     },
     price: {},
     inStock: {},
+    reviews: {},
+    rating: {},
+    deliveryTime: {},
   },
 };
 
