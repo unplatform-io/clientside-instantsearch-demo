@@ -5,9 +5,7 @@ import {
   connectStateResults,
   VoiceSearch,
   ScrollTo,
-  QueryRuleCustomData,
   PoweredBy,
-  Index,
 } from "react-instantsearch-dom";
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
