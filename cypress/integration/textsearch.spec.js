@@ -1,4 +1,4 @@
-describe("text search", () => {
+describe("Text search", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000");
   });

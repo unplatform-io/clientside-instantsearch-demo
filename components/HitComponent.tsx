@@ -14,6 +14,7 @@ type Props = {
   color: string;
   rating: number;
   deliveryTime: number;
+  reviews: number;
   inStock: boolean;
 };
 
@@ -59,7 +60,9 @@ function HitComponent({ hit }: HitComponentProps) {
               <br />
               <a>Rating: {hit.rating}</a>
               <br />
-              <a>deliveryTime: {hit.deliveryTime} days</a>
+              <a>Delivery time: {hit.deliveryTime} days</a>
+              <br />
+              <a>Amount of reviews: {hit.reviews}</a>
             </p>
           </div>
         </div>
