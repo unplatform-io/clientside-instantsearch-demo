@@ -9,6 +9,7 @@ import {
   ToggleRefinement,
   NumericMenu,
   RatingMenu,
+  SortBy,
 } from "react-instantsearch-dom";
 
 import { CustomRangeSlider } from "./connectRangeSlider";
@@ -28,6 +29,15 @@ export default function Sidebar() {
             { value: 20, label: "Show 20 hits" },
           ]}
           defaultRefinement={10}
+        />
+        <SortBy
+          defaultRefinement=""
+          items={[
+            { value: "price_desc", label: "Price, high to low" },
+            { value: "price_asc", label: "Price, low to high" },
+            { value: "rating.rate_desc", label: "Rating, high to low" },
+            { value: "rating.rate_asc", label: "Rating, low to high" },
+          ]}
         />
       </div>
       <div>
@@ -51,7 +61,6 @@ export default function Sidebar() {
           label={<h4>In Stock</h4>}
           value={true}
         />
-        <br />
         <h4>Rating</h4>
         <RatingMenu attribute={"rating"} />
         <br />

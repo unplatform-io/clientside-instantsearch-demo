@@ -14,21 +14,9 @@ describe("text search", () => {
     cy.should("not.contain", "Solid Gold Petite Micropave");
   });
 
-  it("when not serach see placeholder", () => {
-    cy.get(".ais-SearchBox-input").first();
-    cy.should("have.attr", "placeholder", "Search for products").should(
-      "be.visible"
-    );
-
-    cy.get(".ais-SearchBox-input").first().type("gold");
+  it("check placeholder", () => {
     cy.get(".ais-SearchBox-input")
       .first()
-      .should("have.attr", "placeholder", "Search for products")
-      .should("not.be.visible");
-
-    cy.get(".ais-SearchBox-input").first().clear();
-    cy.should("have.attr", "placeholder", "Search for products").should(
-      "be.visible"
-    );
+      .should("have.attr", "placeholder", "Search for products");
   });
 });

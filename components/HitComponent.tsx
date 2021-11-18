@@ -48,6 +48,7 @@ function HitComponent({ hit }: HitComponentProps) {
               <br />
               <a>{hit.description}</a>
               <br />
+              <a>Rating: {hit.rating.rate}</a>
               <br />
               <a>Category: {hit.category}</a>
               <br />
