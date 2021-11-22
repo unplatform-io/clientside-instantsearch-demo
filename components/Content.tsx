@@ -1,13 +1,7 @@
 import React from "react";
-import { Hits, Stats, Pagination, SortBy } from "react-instantsearch-dom";
+import { Hits, Stats, Pagination } from "react-instantsearch-dom";
 import HitComponent from "./HitComponent";
 import { CustomStateResults } from "./connectStateResults";
-
-// const hit = {
-//   objectID: "1234",
-//   title: "Fjallraven",
-//   category: "men's clothing",
-// };
 
 function Content() {
   return (
