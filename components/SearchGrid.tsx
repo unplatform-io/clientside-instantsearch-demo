@@ -42,10 +42,6 @@ function SearchGrid({ searchClient }: any) {
         <SearchErrorCatcher />
         <header className="header">
           <div>
-            <PoweredBy />
-            <br />
-          </div>
-          <div>
             <ScrollTo>
               <SearchBox
                 translations={{ placeholder: "Search for products" }}
