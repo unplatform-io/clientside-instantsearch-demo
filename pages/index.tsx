@@ -20,11 +20,19 @@ const options = {
       size: 10,
       conjunction: false,
     },
-    price: {},
+    price: {
+      show_facet_stats: true,
+    },
     inStock: {},
-    reviews: {},
-    rating: {},
-    deliveryTime: {},
+    reviews: {
+      show_facet_stats: true,
+    },
+    rating: {
+      show_facet_stats: true,
+    },
+    deliveryTime: {
+      show_facet_stats: true,
+    },
   },
   sortings: {
     price_asc: {
