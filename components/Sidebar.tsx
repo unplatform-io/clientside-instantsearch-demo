@@ -77,7 +77,7 @@ export default function Sidebar() {
           <NumericMenu
             attribute="reviews"
             items={[
-              { label: "less than 10", end: 10 },
+              { label: "Less than 10", end: 10 },
               { label: "10 till 25", start: 10, end: 25 },
               { label: "25 till 50", start: 25, end: 50 },
               { label: "More than 50", start: 50 },
