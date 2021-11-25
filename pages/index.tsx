@@ -20,7 +20,19 @@ const options = {
       size: 10,
       conjunction: false,
     },
-    price: {}, //required to get correct response from adapter
+    price: {
+      show_facet_stats: true,
+    },
+    inStock: {},
+    reviews: {
+      show_facet_stats: true,
+    },
+    rating: {
+      show_facet_stats: true,
+    },
+    deliveryTime: {
+      show_facet_stats: true,
+    },
   },
   sortings: {
     price_asc: {

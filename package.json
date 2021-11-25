@@ -18,11 +18,13 @@
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-instantsearch-dom": "^6.12.1"
+    "react-instantsearch-dom": "^6.12.1",
+    "rheostat": "^4.1.1"
   },
   "devDependencies": {
     "@types/react": "17.0.29",
     "@types/react-instantsearch-dom": "^6.12.0",
+    "@types/rheostat": "^3.0.2",
     "cypress": "^8.6.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "11.1.2",
