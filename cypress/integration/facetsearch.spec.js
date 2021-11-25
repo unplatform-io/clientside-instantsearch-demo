@@ -77,7 +77,9 @@ describe("facet search", () => {
 
     cy.get(".right-column").should("contain", "In Stock: No");
 
-    cy.get(".ais-ToggleRefinement-labelText").click();
+    cy.get(".ais-ToggleRefinement-checkbox").click({
+      force: true
+    });
 
     cy.get(".right-column").should("not.contain", "In Stock: No");
     cy.get(".right-column").should("contain", "In Stock: Yes");
