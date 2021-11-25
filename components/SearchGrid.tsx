@@ -51,7 +51,6 @@ function SearchGrid({ searchClient }: any) {
           </div>
         </header>
         <main>
-          {/* <Configure facetFilters={["category:electronics"]} /> */}
           <Sidebar />
           <Content />
         </main>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { connectRange } from "react-instantsearch-dom";
 
 // Prerequisite: install rheostat@4
@@ -13,10 +13,10 @@ const RangeSlider = ({
   canRefine,
   refine,
 }: any) => {
-  const [stateMin, setStateMin] = React.useState(min);
-  const [stateMax, setStateMax] = React.useState(max);
+  const [stateMin, setStateMin] = useState(min);
+  const [stateMax, setStateMax] = useState(max);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (canRefine) {
       setStateMin(currentRefinement.min);
       setStateMax(currentRefinement.max);
