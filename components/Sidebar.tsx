@@ -11,6 +11,8 @@ import {
   RatingMenu,
   SortBy,
   Panel,
+  HierarchicalMenu,
+  Breadcrumb,
 } from "react-instantsearch-dom";
 
 import { CustomRangeSlider } from "./connectRangeSlider";
@@ -47,7 +49,15 @@ export default function Sidebar() {
       </div>
       <div>
         <Panel header="Category">
-          <RefinementList attribute="category"></RefinementList>
+          <HierarchicalMenu
+            attributes={[
+              "category.lvl0",
+              "category.lvl1",
+              "category.lvl2",
+              "category.lvl3",
+            ]}
+            // rootPath="women's clothing"
+          />
         </Panel>
         <br />
         <Panel header="Color">

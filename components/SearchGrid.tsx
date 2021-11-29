@@ -6,6 +6,7 @@ import {
   VoiceSearch,
   ScrollTo,
   PoweredBy,
+  Breadcrumb,
 } from "react-instantsearch-dom";
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
@@ -48,6 +49,14 @@ function SearchGrid({ searchClient }: any) {
               />
             </ScrollTo>
             <VoiceSearch />
+            <Breadcrumb
+              attributes={[
+                "category.lvl0",
+                "category.lvl1",
+                "category.lvl2",
+                "category.lvl3",
+              ]}
+            />
           </div>
         </header>
         <main>

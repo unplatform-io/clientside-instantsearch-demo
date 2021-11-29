@@ -33,6 +33,8 @@ const options = {
     deliveryTime: {
       show_facet_stats: true,
     },
+    "category.lvl0": {},
+    "category.lvl1": {},
   },
   sortings: {
     price_asc: {
