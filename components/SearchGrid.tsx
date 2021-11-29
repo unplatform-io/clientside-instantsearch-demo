@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 import {
   InstantSearch,
-  SearchBox,
+  // SearchBox,
   connectStateResults,
+  // connectSearchBox,
   VoiceSearch,
   ScrollTo,
   PoweredBy,
 } from "react-instantsearch-dom";
+
+// import connectSearchBox from "./connectSearchBox";
+// import connectSearchBox from "./Searchbox";
+import SearchBox from "./Searchbox";
+
 import Sidebar from "../components/Sidebar";
 import Content from "../components/Content";
 import algoliasearch from "algoliasearch/lite";
@@ -43,9 +49,11 @@ function SearchGrid({ searchClient }: any) {
         <header className="header">
           <div>
             <ScrollTo>
-              <SearchBox
+              {/* <SearchBox
                 translations={{ placeholder: "Search for products" }}
-              />
+              /> */}
+              <SearchBox />
+              
             </ScrollTo>
             <VoiceSearch />
           </div>

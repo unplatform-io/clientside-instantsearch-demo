@@ -20,7 +20,7 @@ export default function Sidebar() {
     <div className="left-column">
       <div>
         <Panel header="Refinements">
-          <CurrentRefinements />
+          <CurrentRefinements clearsQuery={true}/>
           <ClearRefinements />
         </Panel>
         <br />
