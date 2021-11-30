@@ -8,7 +8,7 @@ describe("facet search", () => {
       "contain",
       "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
     );
-    cy.get(".ais-RefinementList").first().contains("jewelery").click();
+    cy.get(".ais-HierarchicalMenu").first().contains("jewelery").click();
     cy.get(".right-column").should(
       "not.contain",
       "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
@@ -17,7 +17,7 @@ describe("facet search", () => {
       "contain",
       "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet"
     );
-    cy.get(".ais-RefinementList").first().contains("jewelery").click();
+    cy.get(".ais-HierarchicalMenu").first().contains("jewelery").click();
     cy.get(".right-column").should(
       "contain",
       "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
@@ -41,7 +41,7 @@ describe("facet search", () => {
       "contain",
       "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
     );
-    cy.get(".ais-RefinementList").first().contains("electronics").click();
+    cy.get(".ais-HierarchicalMenu").first().contains("electronics").click();
     cy.get(".right-column").should(
       "not.contain",
       "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
@@ -59,7 +59,7 @@ describe("facet search", () => {
       "contain",
       "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s"
     );
-    cy.get(".ais-RefinementList").first().contains("electronics").click();
+    cy.get(".ais-HierarchicalMenu").first().contains("electronics").click();
     cy.get(".right-column").should(
       "not.contain",
       "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops"
@@ -88,7 +88,7 @@ describe("facet search", () => {
   });
 
   it("CurrentRefinements", () => {
-    cy.get(".ais-RefinementList").first().contains("jewelery").click();
+    cy.get(".ais-HierarchicalMenu").first().contains("jewelery").click();
     cy.get(".ais-CurrentRefinements").should("contain", "jewelery");
     cy.get(".ais-CurrentRefinements").should("not.contain", "Blue");
     cy.get(".ais-MenuSelect-select").first().select("Blue");

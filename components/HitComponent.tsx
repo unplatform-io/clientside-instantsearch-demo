@@ -1,7 +1,6 @@
 import React from "react";
 import { Hit } from "react-instantsearch-core";
 import Image from "next/image";
-import { Snippet } from "react-instantsearch-dom";
 
 type Props = {
   id: number;
@@ -44,9 +43,6 @@ function HitComponent({ hit }: HitComponentProps) {
           </div>
           <div className="hit-description">
             <p>
-              <Snippet attribute="snippets" hit={hit} separator=" - " />
-              <br />
-              <br />
               <a>{hit.description}</a>
               <br />
               <br />
