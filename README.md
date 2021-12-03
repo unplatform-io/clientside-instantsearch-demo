@@ -10,7 +10,7 @@ This Instantsearch based application demonstrates how to perform client-side sea
 ### Visit website
 Go to [this link](https://clientside-instantsearch-demo.vercel.app/) to see the demo in action.
 
-### Run at localhost
+### Run on localhost
 After cloning this GitHub repository, run the following commands to start the application on your localhost.
 
 ```bash
