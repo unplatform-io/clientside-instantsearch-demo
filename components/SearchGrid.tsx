@@ -5,7 +5,6 @@ import {
   connectStateResults,
   VoiceSearch,
   ScrollTo,
-  PoweredBy,
   Breadcrumb,
 } from "react-instantsearch-dom";
 import Sidebar from "../components/Sidebar";
