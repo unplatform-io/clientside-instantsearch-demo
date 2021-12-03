@@ -4,9 +4,9 @@
 
 ## Introduction Instantsearch-ItemsJS-adapter 
 
-This Instantsearch based application demonstrates how to perform client-side search using the [Instantsearch-ItemsJS-adapter](https://github.com/unplatform-io/instantsearch-itemsjs-adapter) package. This package will connect Instantsearch to ItemsJS.
+This Instantsearch based application demonstrates how to perform client-side search using the [Instantsearch-ItemsJS-adapter](https://github.com/unplatform-io/instantsearch-itemsjs-adapter) package. This package will connect Instantsearch with ItemsJS.
 
-## Use aplication
+## Use application
 ### Visit website
 Go to [this link](https://clientside-instantsearch-demo.vercel.app/) to see the demo in action.
 
