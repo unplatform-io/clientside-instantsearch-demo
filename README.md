@@ -12,7 +12,7 @@ Almost all features of Instantsearch will work with the adapter. Information abo
 
 ## Use application
 Go to [this link](https://clientside-instantsearch-demo.vercel.app/) to see the demo in action.
-<img src="https://github.com/unplatform-io/clientside-instantsearch-demo/blob/readme-update/demo.gif" alt="Demo" align="center" width="80%" />
+<img src="https://github.com/unplatform-io/clientside-instantsearch-demo/blob/main/demo.gif" alt="Demo" width="80%" />
 ### Run on localhost
 After cloning this GitHub repository, run the following commands to start the application on your localhost.
 
