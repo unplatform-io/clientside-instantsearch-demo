@@ -1,4 +1,4 @@
-# Clientside Instantsearch Demo
+# Client-side Instantsearch Demo
 
 <img src="https://github.com/unplatform-io/instantsearch-itemsjs-adapter/blob/main/logo-orange.svg" alt="Instantsearch-ItemsJS-adapter" align="right" width="20%" />
 
@@ -10,7 +10,7 @@ However, there are other options offering a suitable back-end solution. Definite
 
 Furthermore, the use of a search service with a lot of functions is not necessary very often. Certainly not for an online store with a limited number of products. And if necessary, users can simply switch from this adapter to Algolia, because it supports the same front-end (Instantsearch).
 
-This demo shows how Instantsearch can be used with ItemsJS using the Instantsearch-ItemsJS-adapter NPM-package. This package connects Instantsearch to ItemsJS and ItemsJS will perform a client side based search for your website. Almost all features of Instantsearch are supported with this adapter. A List of features with extra Information can be found in the [adapter package readme](https://github.com/unplatform-io/instantsearch-itemsjs-adapter#readme).
+This demo shows how Instantsearch can be used with ItemsJS using the Instantsearch-ItemsJS-adapter NPM-package. This package connects Instantsearch to ItemsJS and ItemsJS will perform a client-side based search for your website. Almost all features of Instantsearch are supported with this adapter. A List of features with extra information can be found in the [adapter package readme](https://github.com/unplatform-io/instantsearch-itemsjs-adapter#readme).
 
 ## Use application
 
