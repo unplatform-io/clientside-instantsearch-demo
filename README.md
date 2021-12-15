@@ -4,11 +4,13 @@
 
 ## Introduction Instantsearch-ItemsJS-adapter
 
-Instantsearch (build by Algolia) is an open-source, production-ready UI library that lets you quickly build a search interface in your front-end application. In combination with an (paid) Algolia backend, you can quickly perform searches on your website.
+Instantsearch (build by Algolia) is an open-source, production-ready UI library that lets you quickly build a search interface in your front-end application. You can quickly perform searches on your website, in combination with an Algolia back-end (pay per search).
 
-However, There are other options that also offer a suitable solution for a new business with a small catalog. Performance is less important for such a business, and not all features are necessary. Also, a paid service can be high in costs. That are some of the reasons the [Instantsearch-ItemsJS-adapter](https://www.npmjs.com/package/instantsearch-itemsjs-adapter) NPM-package has been build. It can be easily implemented and because of using the same front-end, users can simply upgrade from this adapter to Algolia.
+However, there are other options offering a suitable back-end solution. Definitely for a new business with a small catalog. For instance, with the [Instantsearch-ItemsJS-adapter](https://www.npmjs.com/package/instantsearch-itemsjs-adapter) NPM-package. This package has a lot of features and can be easily implemented in your frond-end application. Another benefit is not having to think about the costs.
 
-This demo shows how Instantsearch can be used with ItemsJS using the Instantsearch-ItemsJS-adapter NPM-package. This package connects Instantsearch to ItemsJS and ItemsJS will perform a client side based search for your website. Almost all features of Instantsearch will work with the adapter. Information about these features can be found in the [adapter package readme](https://github.com/unplatform-io/instantsearch-itemsjs-adapter#readme).
+Furthermore, the use of a search service with a lot of functions is not necessary very often. Certainly not for an online store with a limited number of products. And if necessary, users can simply switch from this adapter to Algolia, because it supports the same front-end (Instantsearch).
+
+This demo shows how Instantsearch can be used with ItemsJS using the Instantsearch-ItemsJS-adapter NPM-package. This package connects Instantsearch to ItemsJS and ItemsJS will perform a client side based search for your website. Almost all features of Instantsearch are supported with this adapter. A List of features with extra Information can be found in the [adapter package readme](https://github.com/unplatform-io/instantsearch-itemsjs-adapter#readme).
 
 ## Use application
 
